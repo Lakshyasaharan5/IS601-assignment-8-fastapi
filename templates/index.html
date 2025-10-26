@@ -40,69 +40,74 @@
         The <title> element defines the title of the HTML document, which appears in the browser's
         title bar or tab. It is also used by search engines to understand the content of the page.
     -->
-    
-    <style>
-        /*
-            <style> Section: CSS Styles
-            
-            The <style> element allows you to embed CSS (Cascading Style Sheets) directly within
-            the HTML document. CSS is used to style and layout web pages, controlling aspects
-            like colors, fonts, spacing, and positioning.
-        */
-        
+<style>
         body {
-            /* 
-                Styles for the <body> Element
-                
-                - font-family: Sets the font for the entire page to Arial, sans-serif.
-                - text-align: Centers the text horizontally.
-                - margin-top: Adds a 50-pixel margin at the top of the page for spacing.
-            */
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+            color: #333;
         }
-        
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
         .calculator {
-            /* 
-                Styles for Elements with the "calculator" Class
-                
-                - margin-top: Adds a 30-pixel margin above the calculator section to separate it
-                  from other content.
-            */
+            display: inline-block;
             margin-top: 30px;
+            padding: 25px 30px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
+        .calculator:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
         input {
-            /* 
-                Styles for <input> Elements
-                
-                - margin: Adds a 5-pixel margin around input fields for spacing.
-                - padding: Adds a 5-pixel padding inside input fields for better readability.
-            */
             margin: 5px;
-            padding: 5px;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 150px;
+            transition: border-color 0.2s ease;
         }
-        
+
+        input:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
         button {
-            /* 
-                Styles for <button> Elements
-                
-                - padding: Adds 5 pixels of vertical padding and 10 pixels of horizontal padding
-                  inside buttons to make them larger and more clickable.
-            */
-            padding: 5px 10px;
+            padding: 6px 14px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4a90e2;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
         }
-        
+
+        button:hover {
+            background-color: #357ABD;
+            transform: scale(1.03);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
         .result {
-            /* 
-                Styles for Elements with the "result" Class
-                
-                - margin-top: Adds a 10-pixel margin above the result display area.
-                - font-weight: Makes the text bold to emphasize the result.
-            */
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: bold;
+            color: #222;
         }
     </style>
 </head>
